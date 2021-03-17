@@ -1,0 +1,39 @@
+<style>
+  table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+</style>
+<section>
+    <div class="spacer">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-9">
+            <div class="row shop-listing">
+              <div class="col-lg-4" *ngFor="let product of products">
+                <div class="card border-0">
+                  <h6>
+                    <a href="#" class="link">{{ product.name }}</a>
+                  </h6>
+                  <h5 class="font-medium m-b-30">
+                    ${{product.price}}
+                  </h5>
+                  <input type="number" value="1" #input>
+                  <div class="card-img align-items-center">
+                   <button class="btn btn-md btn-info" (click)="addProductToCart(product, input)">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

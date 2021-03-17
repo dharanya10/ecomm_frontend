@@ -1,1 +1,3 @@
-# ecomm_frontend
+# ecomm
+npm install
+ng serve
