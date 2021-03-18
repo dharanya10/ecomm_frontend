@@ -14,15 +14,13 @@ export class CartComponent implements OnInit {
       this.carts = data;
      });
   }
-  async emptyCart(): Promise<void> {
-    length=this.carts.items.length
-    for(let i=0;i<length;i++ )
-      {
-        await this.http.emptyCart(this.carts.items[i]._id).subscribe((result) => {
-        });
-      }
+  emptyCart(): void{
+    
+    this.http.emptyCart().subscribe(() => {
       this.getCart();
+    });
   }
+    
   ngOnInit(): void {
     this.getCart();
   }

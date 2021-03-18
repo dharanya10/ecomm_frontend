@@ -18,8 +18,8 @@ export class HttpService {
   increaseQty(payload,id) {
     return this.http.put(`http://localhost:3000/cart/${id}`, payload);
   }
-  emptyCart(carts) {
-    return this.http.delete(`http://localhost:3000/cart/${carts}`);
+  emptyCart() {
+    return this.http.delete(`http://localhost:3000/cart`);
       
   }
 }
